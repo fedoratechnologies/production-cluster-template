@@ -14,7 +14,7 @@ spec:
     secretRef:
       name: sops-age
   interval: 1h
-  path: ./apps/network/cloudflare-dns
+  path: ./kubernetes/apps/network/cloudflare-dns
   postBuild:
     substituteFrom:
       - name: cluster-secrets
