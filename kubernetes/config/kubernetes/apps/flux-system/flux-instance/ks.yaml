@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
+# yaml-language-server: =https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -17,11 +17,11 @@ spec:
     - name: flux-operator
       namespace: flux-system
   interval: 1h
-  path: ./apps/flux-system/flux-instance/app
+  path: ./config/kubernetes/apps/flux-system/flux-instance/app
   postBuild:
     substituteFrom:
-      - kind: Secret
-        name: cluster-secrets
+      - name: cluster-secrets
+        kind: Secret
   prune: true
   retryInterval: 2m
   sourceRef:
