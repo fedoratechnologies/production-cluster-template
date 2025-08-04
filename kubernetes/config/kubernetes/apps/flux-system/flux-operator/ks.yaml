@@ -14,7 +14,7 @@ spec:
     secretRef:
       name: sops-age
   interval: 1h
-  path: ./apps/flux-system/flux-operator/app
+  path: ./config/kubernetes/apps/flux-system/flux-operator/app
   postBuild:
     substituteFrom:
       - name: cluster-secrets
