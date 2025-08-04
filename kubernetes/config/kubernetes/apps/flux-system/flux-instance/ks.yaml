@@ -17,7 +17,7 @@ spec:
     - name: flux-operator
       namespace: flux-system
   interval: 1h
-  path: ./kubernetes/config/kubernetes/apps/flux-system/flux-instance/app
+  path: ./apps/flux-system/flux-instance/app
   postBuild:
     substituteFrom:
       - kind: Secret

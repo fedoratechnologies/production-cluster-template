@@ -14,7 +14,7 @@ spec:
     secretRef:
       name: sops-age
   interval: 1h
-  path: ./kubernetes/apps/kube-system/cilium/app
+  path: ./apps/kube-system/cilium/app
   postBuild:
     substituteFrom:
       - name: cluster-secrets
@@ -47,7 +47,7 @@ spec:
     - name: cert-manager
       namespace: cert-manager
   interval: 1h
-  path: ./kubernetes/apps/kube-system/cilium/gateway
+  path: ./apps/kube-system/cilium/app
   postBuild:
     substituteFrom:
       - name: cluster-secrets

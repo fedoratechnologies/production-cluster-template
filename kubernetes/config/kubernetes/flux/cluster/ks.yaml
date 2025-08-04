@@ -11,7 +11,7 @@ spec:
     secretRef:
       name: sops-age
   interval: 1h
-  path: ./kubernetes/flux/meta
+  path: ./flux/cluster/app
   prune: true
   retryInterval: 2m
   sourceRef:
@@ -37,7 +37,7 @@ spec:
     - name: cluster-meta
       namespace: flux-system
   interval: 1h
-  path: ./kubernetes/apps
+  path: ./flux/cluster/app
   prune: true
   retryInterval: 2m
   sourceRef:
